@@ -8,4 +8,4 @@
 - Braintree API
 
 ### Devpost link:
-link here soon
+https://devpost.com/software/paypal-teen
