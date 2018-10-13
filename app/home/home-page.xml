@@ -1,0 +1,20 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title="Paypal"></ActionBar>
+	<ScrollView orientation="vertical">
+		<StackLayout>
+			<Image class="logo" width="150" src="~/images/GT_Sweatshirt.png" />
+			<StackLayout xmlns:df="nativescript-ui-dataform">
+				<df:RadDataForm id="myDataForm" source="{{ child }}">
+					<df:RadDataForm.properties>
+						<df:EntityProperty name="childName" displayName="Teen's Name" index="0" />
+						<df:EntityProperty name="childEmail" displayName="Teen's Email" index="1" />
+						<df:EntityProperty name="product" displayName="Sweatshirt" index="2" />
+						<df:EntityProperty name="description" displayName="Product Description" index="3" />
+						<df:EntityProperty name="price" displayName="Price" index="4" />
+					</df:RadDataForm.properties>
+				</df:RadDataForm>
+			</StackLayout>
+			<Button class="btn" text="Approve of this purchase" tap="{{ onButtonTap1 }}" />
+			<Button class="btn" text="Deny this purchase" tap="{{ onButtonTap2 }}" /></StackLayout>
+	</ScrollView>
+</Page>

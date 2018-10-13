@@ -1,0 +1,34 @@
+import { View, Property } from "tns-core-modules/ui/core/view";
+import { RadChartBase } from "../../ui-chart.common";
+export declare class RadLegendView extends View {
+    position: string;
+    offsetOrigin: string;
+    horizontalOffset: number;
+    verticalOffset: number;
+    title: string;
+    titleColor: string;
+    titleSize: number;
+    enableSelection: boolean;
+    static titleSizeProperty: Property<RadLegendView, number>;
+    protected onTitleSizeChanged(oldValue: number, newValue: number): void;
+    static titleColorProperty: Property<RadLegendView, string>;
+    protected onTitleColorChanged(oldValue: string, newValue: string): void;
+    static enableSelectionProperty: Property<RadLegendView, boolean>;
+    private onEnableSelectionChanged(oldValue, newValue);
+    static positionProperty: Property<RadLegendView, string>;
+    private onPositionPropertyChanged(oldValue, newValue);
+    protected onPositionChanged(oldValue: string, newValue: string): void;
+    static offsetOriginProperty: Property<RadLegendView, string>;
+    private onOffsetOriginPropertyChanged(oldValue, newValue);
+    protected onOffsetOriginChanged(oldValue: string, newValue: string): void;
+    static horizontalOffsetProperty: Property<RadLegendView, number>;
+    private onHorizontalOffsetPropertyChanged(oldValue, newValue);
+    protected onHorizontalOffsetChanged(oldValue: number, newValue: number): void;
+    static verticalOffsetProperty: Property<RadLegendView, number>;
+    private onVerticalOffsetPropertyChanged(oldValue, newValue);
+    protected onVerticalOffsetChanged(oldValue: number, newValue: number): void;
+    static titleProperty: Property<RadLegendView, string>;
+    private onTitlePropertyChanged(oldValue, newValue);
+    protected onTitleChanged(oldValue: string, newValue: string): void;
+    updateLegendView(chartView: RadChartBase): void;
+}

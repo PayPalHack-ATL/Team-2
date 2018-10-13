@@ -1,0 +1,4 @@
+{ "name" : "gauges-vue-directives",
+  "main" : "gauges-vue-directives",
+  "typings" : "gauges-vue-directives.d.ts"
+}

@@ -1,0 +1,18 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title="Receipt"></ActionBar>
+	<ScrollView orientation="horizontal">
+		<StackLayout orientation="vertical" width="100%" height="100%" backgroundColor="lightgray">
+			<StackLayout xmlns:df="nativescript-ui-dataform">
+				<df:RadDataForm id="myDataForm" source="{{ receipt }}">
+					<df:RadDataForm.properties>
+						<df:EntityProperty name="orderNumber" displayName="Order Number" index="0" />
+						<df:EntityProperty name="orderProduct" displayName="Product Name" index="1" />
+						<df:EntityProperty name="productDescription" displayName="Product Details" index="2" />
+						<df:EntityProperty name="totalPrice" displayName="Order Total" index="3" />
+						<df:EntityProperty name="expectedShipping" displayName="Expected Ship Date" index="4" />
+					</df:RadDataForm.properties>
+				</df:RadDataForm>
+			</StackLayout>
+		</StackLayout>
+	</ScrollView>
+</Page>

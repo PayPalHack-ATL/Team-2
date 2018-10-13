@@ -1,0 +1,4 @@
+{ "name" : "calendar-vue-directives",
+  "main" : "calendar-vue-directives",
+  "typings" : "calendar-vue-directives.d.ts"
+}

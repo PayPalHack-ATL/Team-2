@@ -1,0 +1,4 @@
+{ "name" : "chart-vue-directives",
+  "main" : "chart-vue-directives",
+  "typings" : "chart-vue-directives.d.ts"
+}

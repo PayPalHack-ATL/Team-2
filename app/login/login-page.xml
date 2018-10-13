@@ -1,0 +1,42 @@
+<Page loaded="pageLoaded" class="page" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
+	<FlexboxLayout class="page">
+		<StackLayout class="form">
+			<Image class="logo" src="~/images/logo.png" />
+
+			<StackLayout class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+				<TextField id="name" class="input" text="{{ name }}" hint="Teen's name" secure="true" returnKeyType="done"
+				/>
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<StackLayout class="input-field">
+				<TextField class="input" text="{{ email }}" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none"
+				 returnKeyType="next" />
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<StackLayout class="input-field">
+				<TextField id="password" class="input" text="{{ password }}" hint="Password" secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}"
+				/>
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<StackLayout class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+				<TextField id="confirmPassword" class="input" text="{{ confirmPassword }}" hint="Confirm password" secure="true" returnKeyType="done"
+				/>
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<Button text="{{ isLoggingIn ? 'Log In' : 'Sign Up' }}" tap="{{ submit }}" class="btn btn-primary m-t-20" />
+			<Label visibility="{{ isLoggingIn ? 'visible' : 'collapse' }}" text="Forgot your password?" class="login-label" tap="{{ forgotPassword }}"
+			/>
+		</StackLayout>
+
+		<Label class="login-label sign-up-label" tap="{{ toggleForm }}">
+			<FormattedString>
+				<Span text="{{ isLoggingIn ? 'Don’t have a PayPal Teen account? ' : 'Back to Login' }}" />
+				<Span text="{{ isLoggingIn ? 'Sign up' : '' }}" class="bold" />
+			</FormattedString>
+		</Label>
+	</FlexboxLayout>
+</Page>
